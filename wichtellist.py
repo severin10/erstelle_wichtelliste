@@ -30,7 +30,7 @@ TEILNEHMER
 wichtel = TEILNEHMER[-1:] + TEILNEHMER[:-1]
 liste = dict(zip(TEILNEHMER, wichtel))
 
-pprint.pp(liste)
+# pprint.pp(liste)  # kann zu Debug-Zwecken auskommentiert werden; zeigt die Paarungen an.
 
 def generate_html():
     generator = WichtelHtmlGenerator(output_dir="output")
