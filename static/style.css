@@ -1,0 +1,116 @@
+/* Wichtel HTML Generator – gemeinsames Stylesheet */
+
+:root {
+  color-scheme: light dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   Personen-Seite (body.person-page)
+   ========================================================= */
+
+body.person-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  margin: 0;
+  background: #f7f3ef;
+  color: #222;
+  text-align: center;
+  padding: clamp(1.25rem, 6vw, 2rem);
+}
+
+body.person-page h1 {
+  font-size: clamp(2.25rem, 11vw, 4.5rem);
+  margin: 0 0 0.5rem;
+  word-break: break-word;
+}
+
+body.person-page p.subtitle {
+  font-size: clamp(1rem, 3.5vw, 1.1rem);
+  color: #666;
+  margin: 0 0 clamp(1.75rem, 8vw, 3rem);
+}
+
+body.person-page .reveal-box {
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+body.person-page button {
+  font-size: clamp(1rem, 4vw, 1.2rem);
+  padding: 0.9rem 2rem;
+  min-height: 44px;
+  border: none;
+  border-radius: 999px;
+  background: #b23b3b;
+  color: #fff;
+  cursor: pointer;
+}
+
+body.person-page button:hover {
+  background: #922f2f;
+}
+
+body.person-page #name {
+  font-size: clamp(1.75rem, 9vw, 3.2rem);
+  font-weight: bold;
+  color: #b23b3b;
+  display: none;
+  word-break: break-word;
+}
+
+/* =========================================================
+   Übersicht-Seite (body.index-page)
+   ========================================================= */
+
+body.index-page {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  max-width: 30rem;
+  margin: clamp(1.5rem, 8vw, 3rem) auto;
+  padding: 0 clamp(1rem, 4vw, 1.5rem);
+  color: #222;
+}
+
+body.index-page h1 {
+  font-size: clamp(1.75rem, 8vw, 2.5rem);
+  text-align: center;
+}
+
+body.index-page ul {
+  list-style: none;
+  padding: 0;
+}
+
+body.index-page li {
+  margin: 0.5rem 0;
+}
+
+body.index-page a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.8rem 1rem;
+  font-size: clamp(0.95rem, 3.5vw, 1rem);
+  background: #f7f3ef;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: #b23b3b;
+  font-weight: bold;
+}
+
+body.index-page a:hover {
+  background: #eee0d5;
+}
