@@ -21,7 +21,24 @@ Die Seiten sind nicht geschützt, es funktioniert auf Vertrauensbasis der Teilne
 
 Im Ordner `output` wurde nun für jeden Teilnehmer eine html-Datei erstellt plus eine Datei **index.html**
 
-Lade die Dateien auf deinen Webserver hoch und verschicke die Links dazu.
+Lade die Dateien auf deinen Webserver hoch und verschicke die Links dazu. Dafür kannst du entweder deinen gewohnten FTP-Client verwenden oder das mitgelieferte Upload-Script, siehe nächster Abschnitt.
+
+# Upload per FTP
+
+**ftp_upload.py** lädt den kompletten Inhalt von `output/` automatisch per FTP(S) auf deinen Webserver hoch, sodass du die Dateien nicht manuell per FTP-Client übertragen musst.
+
+1. Kopiere **ftp_config.ini.example** zu **ftp_config.ini** (falls diese Datei noch nicht existiert).
+1. Trage in **ftp_config.ini** deine Zugangsdaten ein:
+   - `host`: Adresse deines FTP-Servers
+   - `port`: FTP-Port (Standard: 21)
+   - `user` / `password`: dein FTP-Zugang
+   - `remote_dir`: Zielverzeichnis auf dem Server (leer lassen für das Wurzelverzeichnis); wird bei Bedarf automatisch angelegt
+   - `use_tls`: `true` für eine verschlüsselte FTPS-Verbindung (empfohlen, sofern dein Provider das unterstützt)
+1. Führe `python ftp_upload.py` aus.
+
+Das Script lädt alle Dateien aus `output/` (die HTML-Seiten sowie **style.css**) auf den Server hoch und meldet jede erfolgreich übertragene Datei.
+
+`ftp_config.ini` enthält dein Passwort im Klartext und ist deshalb per **.gitignore** von der Versionskontrolle ausgeschlossen – sie sollte nicht geteilt oder eingecheckt werden.
 
 # Screenhots
 

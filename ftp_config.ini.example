@@ -1,0 +1,9 @@
+[ftp]
+host = ftp.example.com
+port = 21
+user = dein-ftp-benutzername
+password = dein-ftp-passwort
+; Zielverzeichnis auf dem Server, in das hochgeladen wird (leer = Wurzelverzeichnis)
+remote_dir =
+; FTPS (verschluesselte Verbindung) verwenden, falls vom Provider unterstuetzt
+use_tls = true
